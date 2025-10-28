@@ -1,201 +1,184 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.s1 {font: 12.0px 'Apple Color Emoji'}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vines & Veils | Day of Coordination</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(160deg, #ffe0f0, #e8f7ff, #fff6da);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .vine-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background-image: url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png'),
+                        url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png'),
+                        url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png'),
+                        url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png');
+      background-repeat: no-repeat;
+      background-size: 200px;
+      background-position: top left, top right, bottom left, bottom right;
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #6b3e8a;
+      margin-bottom: 0.3rem;
+    }
+
+    p.subtitle {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    .link-button {
+      display: block;
+      background: linear-gradient(135deg, #f7b8e0, #b7e4f9, #fef3c7);
+      color: #333;
+      text-decoration: none;
+      padding: 0.9rem 1.2rem;
+      border-radius: 30px;
+      margin: 0.6rem 0;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .link-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 1.5rem;
+    }
+
+    .toggle-section {
+      display: none;
+      margin-top: 1.5rem;
+      max-height: 200px;
+      overflow-y: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: left;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .toggle-section h3 {
+      color: #6b3e8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .toggle-section p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #444;
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Vines &amp; Veils | Day of Coordination&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Poppins', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(160deg, #ffe0f0, #e8f7ff, #fff6da);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow-x: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.vine-border {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>right: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-image: url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png'),</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png'),</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png'),</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>url('https://cdn.pixabay.com/photo/2016/04/01/09/25/green-1304141_1280.png');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-repeat: no-repeat;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-size: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-position: top left, top right, bottom left, bottom right;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.8);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(8px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 90%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 400px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Playfair Display', serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #6b3e8a;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.3rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>p.subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.link-button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #f7b8e0, #b7e4f9, #fef3c7);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.9rem 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0.6rem 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.2s ease, box-shadow 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.link-button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-3px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #666;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.toggle-section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-height: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow-y: auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.9);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: inset 0 0 10px rgba(0,0,0,0.05);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.toggle-section h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #6b3e8a;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.toggle-section p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="vine-border"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Vines &amp; Veils&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="subtitle"&gt;Day of Coordination <span class="s1">✨</span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#" id="book-call" class="link-button"&gt;<span class="s1">💐</span> Book a Call&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#" id="view-contact" class="link-button"&gt;<span class="s1">📞</span> Contact Me&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#" id="view-services" class="link-button"&gt;<span class="s1">🕊️</span> View Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#" id="view-reviews" class="link-button"&gt;<span class="s1">🌸</span> Read Reviews&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#" id="view-about" class="link-button"&gt;<span class="s1">🌿</span> About Me&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="contact-section" class="toggle-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Victoria (Tori) Fischette&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Email me:&lt;/strong&gt; fischettev@gmail.com&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Call me:&lt;/strong&gt; 805-405-6830&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="services-section" class="toggle-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Day of Coordination - $600&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;This comes with one 1-hour planning session before the event, and vendor communications the week of the event.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Additional Planning Sessions - $100 / hour&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Perfect for couples who want a bit of extra support before the big day.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="reviews-section" class="toggle-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;em&gt;"Tori did an awesome job at our wedding! She took over vendor communication the week of, taking a massive lift off our plate. She was prompt, detail oriented, and handled anything that came up quickly and efficiently. Highly recommend!"&lt;/em&gt; - Bri Bradshaw&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;em&gt;"Use Tori as your day of coordinator!! She'll get everyone to where they need to be, no detail will slip through the cracks, and you'll be able to relax and enjoy your day knowing you're covered."&lt;/em&gt; - Chalice Jones&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="about-section" class="toggle-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Hi, I’m Tori — a lifelong organizer and lover of beautiful details. After 9 years running teams and events in the corporate world, I found my true joy in weddings. What started as helping a few friends (and planning my own!) turned into a passion for helping couples feel calm, cared for, and confident on their big day. Now, I bring my professional coordination skills and warm, personal touch to every celebration I’m part of. <span class="s1">💕</span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer"&gt;Made with love in Nashville <span class="s1">💕</span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function toggleSection(sectionId) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const section = document.getElementById(sectionId);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>section.style.display = section.style.display === 'block' ? 'none' : 'block';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('view-services').addEventListener('click', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>toggleSection('services-section');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('view-reviews').addEventListener('click', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>toggleSection('reviews-section');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('view-about').addEventListener('click', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>toggleSection('about-section');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('view-contact').addEventListener('click', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>toggleSection('contact-section');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Updated Book a Call button URL</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('book-call').addEventListener('click', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>window.open('https://docs.google.com/forms/d/e/NEW_FORM_URL_HERE/viewform', '_blank');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="vine-border"></div>
+  <div class="container">
+    <h1>Vines & Veils</h1>
+    <p class="subtitle">Day of Coordination ✨</p>
+
+    <a href="#" id="book-call" class="link-button">💐 Book a Call</a>
+    <a href="#" id="view-contact" class="link-button">📞 Contact Me</a>
+    <a href="#" id="view-services" class="link-button">🕊️ View Services</a>
+    <a href="#" id="view-reviews" class="link-button">🌸 Read Reviews</a>
+    <a href="#" id="view-about" class="link-button">🌿 About Me</a>
+
+    <div id="contact-section" class="toggle-section">
+      <p><strong>Victoria (Tori) Fischette</strong></p>
+      <p><strong>Email me:</strong> fischettev@gmail.com</p>
+      <p><strong>Call me:</strong> 805-405-6830</p>
+    </div>
+
+    <div id="services-section" class="toggle-section">
+      <h3>Day of Coordination - $600</h3>
+      <p>This comes with one 1-hour planning session before the event, and vendor communications the week of the event.</p>
+      <h3>Additional Planning Sessions - $100 / hour</h3>
+      <p>Perfect for couples who want a bit of extra support before the big day.</p>
+    </div>
+
+    <div id="reviews-section" class="toggle-section">
+      <p><em>"Tori did an awesome job at our wedding! She took over vendor communication the week of, taking a massive lift off our plate. She was prompt, detail oriented, and handled anything that came up quickly and efficiently. Highly recommend!"</em> - Bri Bradshaw</p>
+      <p><em>"Use Tori as your day of coordinator!! She'll get everyone to where they need to be, no detail will slip through the cracks, and you'll be able to relax and enjoy your day knowing you're covered."</em> - Chalice Jones</p>
+    </div>
+
+    <div id="about-section" class="toggle-section">
+      <p>Hi, I’m Tori — a lifelong organizer and lover of beautiful details. After 9 years running teams and events in the corporate world, I found my true joy in weddings. What started as helping a few friends (and planning my own!) turned into a passion for helping couples feel calm, cared for, and confident on their big day. Now, I bring my professional coordination skills and warm, personal touch to every celebration I’m part of. 💕</p>
+    </div>
+
+    <div class="footer">Made with love in Nashville 💕</div>
+  </div>
+
+  <script>
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.getElementById('view-services').addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleSection('services-section');
+    });
+
+    document.getElementById('view-reviews').addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleSection('reviews-section');
+    });
+
+    document.getElementById('view-about').addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleSection('about-section');
+    });
+
+    document.getElementById('view-contact').addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleSection('contact-section');
+    });
+
+    // Updated Book a Call button URL
+    document.getElementById('book-call').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open('https://docs.google.com/forms/d/e/NEW_FORM_URL_HERE/viewform', '_blank');
+    });
+  </script>
 </body>
 </html>
